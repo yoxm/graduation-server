@@ -16,6 +16,9 @@ export default async (ctx, next) => {
     console.log(`find ${student.length} student:`);
     const studentValue = student[0].dataValues;
     if (student.length > 0) {
+      console.log("====================================");
+      console.log(studentValue);
+      console.log("====================================");
       ctx.response.status = 200;
       ctx.body = {
         code: 0,

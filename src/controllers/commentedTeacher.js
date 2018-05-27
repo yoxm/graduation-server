@@ -57,4 +57,40 @@ export let setCommentedById = async ctx => {
     }
   );
   console.log(result);
+  ctx.response.status = 200;
+  ctx.body = {
+    code: 0,
+    info: `设置成功`,
+    data: {}
+  };
+};
+
+/**
+ * 根据id更新教师数据
+ */
+export let updateTeacherById = async ctx => {
+  console.log("====================================");
+  console.log("开始更新");
+  console.log("====================================");
+  const { id, name, academy, profession, date } = ctx.request.body;
+  console.log(ctx.request.body);
+  const result = await commentedTeacherModel.update(
+    {
+      name: name,
+      academy: academy,
+      profession: profession,
+      commentedDate: date
+    },
+    {
+      where: {
+        id: id
+      }
+    }
+  );
+  ctx.response.status = 200;
+  ctx.body = {
+    code: 0,
+    info: "更新成功",
+    data: {}
+  };
 };
