@@ -10,7 +10,8 @@ const evaluateResultModel = sequelize.define(
     },
     appraiser: Sequelize.STRING(255),
     evaluateResult: Sequelize.JSON(5000),
-    commentedTeacherId: Sequelize.STRING(32)
+    commentedTeacherId: Sequelize.STRING(32),
+    satisfactRate: Sequelize.STRING(255)
   },
   {
     timestamps: false

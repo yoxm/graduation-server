@@ -27,6 +27,8 @@ router
   .post(
     "/public/updateTeacherById",
     controllers.commentedTeacher.updateTeacherById
-  );
+  )
+  .get("/public/getAnalyseRes", controllers.evaluate.analyseEvaluate)
+  .get("/public/exportTeacher", controllers.download.exportTeacher);
 
 module.exports = router;

@@ -10,6 +10,7 @@
     "production": "node dist/app.js"
   },
   "dependencies": {
+    "excel-export": "^0.5.1",
     "jsonwebtoken": "^8.1.0",
     "koa": "^2.3.0",
     "koa-body": "^2.5.0",

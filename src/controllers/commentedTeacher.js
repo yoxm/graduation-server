@@ -94,3 +94,15 @@ export let updateTeacherById = async ctx => {
     data: {}
   };
 };
+
+/**
+ * 根据id获取参评教师信息
+ */
+export let getTeacherInfoById = async ctx => {
+  const id = ctx.query;
+  console.log("====================================");
+  console.log(`根据${id}查询参评教师信息`);
+  console.log("====================================");
+  const teacherInfo = await commentedTeacherModel.findAll();
+  return teacherInfo;
+};
