@@ -28,7 +28,8 @@ router
     "/public/updateTeacherById",
     controllers.commentedTeacher.updateTeacherById
   )
-  .get("/public/getAnalyseRes", controllers.evaluate.analyseEvaluate)
-  .get("/public/exportTeacher", controllers.download.exportTeacher);
-
+  .get("/public/getSatisfation", controllers.evaluate.getSatisfation)
+  .get("/public/exportTeacher", controllers.download.exportTeacher)
+  .get("/public/getSatisfationMost", controllers.evaluate.getSatisfationMost)
+  .get("/public/exportEvaluate", controllers.download.exportEvaluate);
 module.exports = router;

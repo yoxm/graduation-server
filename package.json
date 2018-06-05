@@ -2,7 +2,6 @@
   "name": "gradutaion-mysql",
   "version": "1.0.0",
   "description": "Koa2 RESTful API 服务器的脚手架",
-  "author": "轶哥 <a@wyr.me>",
   "scripts": {
     "start": "gulp nodemon",
     "dev": "gulp",
