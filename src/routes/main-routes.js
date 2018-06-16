@@ -31,5 +31,9 @@ router
   .get("/public/getSatisfation", controllers.evaluate.getSatisfation)
   .get("/public/exportTeacher", controllers.download.exportTeacher)
   .get("/public/getSatisfationMost", controllers.evaluate.getSatisfationMost)
-  .get("/public/exportEvaluate", controllers.download.exportEvaluate);
+  .get("/public/exportEvaluate", controllers.download.exportEvaluate)
+  .get(
+    "/public/deleteTeacherById",
+    controllers.commentedTeacher.deleteTeacherById
+  );
 module.exports = router;

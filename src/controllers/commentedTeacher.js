@@ -106,3 +106,21 @@ export let getTeacherInfoById = async ctx => {
   const teacherInfo = await commentedTeacherModel.findAll();
   return teacherInfo;
 };
+
+/**
+ * 根据教师id删除
+ */
+export let deleteTeacherById = async ctx => {
+  const { id } = ctx.query;
+  console.log("====================================");
+  console.log(`根据${id}删除评教师信息`);
+  console.log("====================================");
+  commentedTeacherModel.findById(id).then(res => {
+    res.destroy();
+  });
+  ctx.body = {
+    code: 0,
+    info: "删除成功",
+    data: []
+  };
+};
